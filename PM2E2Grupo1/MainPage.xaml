@@ -1,24 +1,52 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PM2E2Grupo1.MainPage">
+             xmlns:local="clr-namespace:PM2E2Grupo1"
+             x:Class="PM2E2Grupo1.MainPage"
+             Title="Home">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+            <Image Source="iconohome.png" Aspect="AspectFit" HeightRequest="200" />
 
+            <Label Text="Bienvenido"
+                   HorizontalTextAlignment="Center"
+                   FontSize="24"/>
+
+            <StackLayout VerticalOptions="Center" Spacing="20">
+                <Button Text="Nueva Ubicacion"
+                        BackgroundColor="#FF4081"
+                        TextColor="White"
+                        FontSize="20"
+                        CornerRadius="10"
+                        Margin="35,20,35,0"
+                        Clicked="OnNuevaUbicacionClicked"
+                        />
+
+                <Button Text="Ubicaciones"
+                        BackgroundColor="#3F51B5"
+                        TextColor="White"
+                        FontSize="20"
+                        CornerRadius="10"
+                        Margin="35,0,35,0"
+                        Clicked="OnUbicacionesClicked"
+                        />
+
+                <Label Text="Armando Lozano - Fabiana Valladares - Jorge Meraz"
+                       HorizontalTextAlignment="Center"
+                       FontSize="14"
+                       TextColor="#999999"
+                       Margin="0" />
+                <Label Text="Estefany Cruz - Elsy Amaya - Elvin Molina"
+                       HorizontalTextAlignment="Center"
+                       FontSize="14"
+                       TextColor="#999999"
+                       Margin="0" />
+                <Label Text="Luis Rodriguez"
+                       HorizontalTextAlignment="Center"
+                       FontSize="14"
+                       TextColor="#999999"
+                       Margin="0" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
